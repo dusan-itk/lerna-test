@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import { HelloWorld } from 'module-1';
+import { HelloWorld } from '@itekako/module-1';
+import { Button } from '@itekako/shared';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button>shared component</Button>
       </header>
     </div>
   );

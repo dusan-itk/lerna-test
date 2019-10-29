@@ -1,5 +1,5 @@
 {
-  "name": "@itekako/module-1",
+  "name": "@itekako/shared",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
