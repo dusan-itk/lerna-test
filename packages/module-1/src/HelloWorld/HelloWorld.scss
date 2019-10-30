@@ -1,0 +1,6 @@
+$test: red;
+
+.hello-world {
+  color: $test;
+  font-size: 20px + 50px;
+}

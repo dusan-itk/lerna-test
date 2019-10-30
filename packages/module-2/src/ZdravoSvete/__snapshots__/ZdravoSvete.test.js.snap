@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ZdravoSvete shoud match snapshot 1`] = `
+<ZdravoSvete>
+  <h1
+    className="zdravo-svete"
+  >
+    Zdravo svete od modula 2
+  </h1>
+</ZdravoSvete>
+`;

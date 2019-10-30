@@ -1,0 +1,57 @@
+module.exports = {
+  clearMocks: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'html', 'cobertura'],
+  collectCoverageFrom: [
+    '<rootDir>/packages/*/src/**/*.{js,jsx,ts,tsx}',
+    '!<rootDir>/pacakges/*/src/**/*.d.ts',
+    '!<rootDir>/node_modules/',
+    '!<rootDir>/packages/*/node_modules/',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 10,
+      functions: 10,
+      lines: 10,
+      statements: 10,
+    },
+  },
+  moduleFileExtensions: [
+    'web.js',
+    'js',
+    'web.ts',
+    'ts',
+    'web.tsx',
+    'tsx',
+    'json',
+    'web.jsx',
+    'jsx',
+    'node',
+  ],
+  modulePathIgnorePatterns: ['lib'],
+  notify: true,
+  notifyMode: 'always',
+  roots: ['<rootDir>/packages'],
+  setupFiles: ['react-app-polyfill/jsdom'],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.js'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  testMatch: [
+    '**/__tests__/*.+(ts|tsx|js|jsx)',
+    '**/*.test.+(ts|tsx|js|jsx)',
+  ],
+  testEnvironment: 'jest-environment-jsdom-fourteen',
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+    "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js",
+  },
+  transformIgnorePatterns: [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$",
+  ],
+  modulePaths: [],
+  watchPlugins: [
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
+};
